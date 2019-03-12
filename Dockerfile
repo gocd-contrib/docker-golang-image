@@ -1,10 +1,11 @@
-FROM golang:1.11.4-alpine
+FROM golang:1.12.0-alpine
 MAINTAINER GoCD Team <go-cd-dev@googlegroups.com>
 
 RUN apk add --no-cache \
   tini \
   curl \
   bash \
+  zip \
   git \
   gcc \
   musl-dev \
