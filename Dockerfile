@@ -7,6 +7,7 @@ RUN apk add --no-cache \
   bash \
   zip \
   git \
+  subversion \
   gcc \
   musl-dev \
   openjdk8-jre-base
