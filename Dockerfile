@@ -3,12 +3,12 @@ MAINTAINER GoCD Team <go-cd-dev@googlegroups.com>
 
 RUN apk add --no-cache \
   tini \
-  curl \
-  bash \
-  zip \
   git \
   gcc \
   musl-dev \
+  bash \
+  zip \
+  curl \
   nss \
   openjdk8-jre-base
 
