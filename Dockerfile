@@ -10,6 +10,7 @@ RUN apk add --no-cache \
   zip \
   curl \
   nss \
+  subversion \
   openjdk8-jre-base
 
 ENTRYPOINT ["/sbin/tini", "--"]
