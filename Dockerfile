@@ -9,6 +9,7 @@ RUN apk add --no-cache \
   git \
   gcc \
   musl-dev \
+  nss \
   openjdk8-jre-base
 
 ENTRYPOINT ["/sbin/tini", "--"]
