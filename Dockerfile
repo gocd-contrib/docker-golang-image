@@ -11,8 +11,6 @@ RUN apk add --no-cache \
   curl \
   nss \
   subversion \
-  ruby \
-  ruby-bundler \
   openjdk8-jre-base
 
 ENTRYPOINT ["/sbin/tini", "--"]
