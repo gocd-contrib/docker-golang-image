@@ -1,4 +1,4 @@
-FROM golang:1.12.9-alpine
+FROM golang:1.13.0-alpine
 MAINTAINER GoCD Team <go-cd-dev@googlegroups.com>
 
 RUN apk add --no-cache \
