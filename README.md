@@ -17,12 +17,12 @@ A docker image containing a Golang environment for builds
 ## Building the image locally
 
 ```
-docker build . -t gocddev/golang-build:1.12.9-alpine -f Dockerfile
+docker build . -t gocddev/golang-build:1.13.0-buster -f Dockerfile
 ```
 
 ## Running
 
 ```
 # starts bash session, `-v` mounts a host path to container mount point
-docker run -it -v /host/path:/path/to/mount/point gocddev/golang-build:1.12.9-alpine /bin/bash
+docker run -it -v /host/path:/path/to/mount/point gocddev/golang-build:1.13.0-buster /bin/bash
 ```
