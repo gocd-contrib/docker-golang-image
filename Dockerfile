@@ -40,7 +40,7 @@ RUN \
 # add user to root group for gocd to work on openshift
   useradd -u ${UID} -g root -d /home/go -m go && \
   apt-get update && \
-  apt-get install -y git subversion openssh-client bash unzip curl locales procps sysvinit-utils coreutils && \
+  apt-get install -y git subversion openssh-client bash zip unzip curl locales procps sysvinit-utils coreutils && \
   apt-get autoclean && \
   echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen && \
   curl --fail --location --silent --show-error 'https://github.com/AdoptOpenJDK/openjdk12-binaries/releases/download/jdk-12.0.1%2B12/OpenJDK12U-jre_x64_linux_hotspot_12.0.1_12.tar.gz' --output /tmp/jre.tar.gz && \
