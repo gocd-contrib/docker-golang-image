@@ -47,7 +47,7 @@ RUN \
   mkdir -p /gocd-jre && \
   tar -xf /tmp/jre.tar.gz -C /gocd-jre --strip 1 && \
   rm -rf /tmp/jre.tar.gz && \
-  mkdir -p /go-agent /docker-entrypoint.d /go /godata
+  mkdir -p /go-agent /docker-entrypoint.d /gocd /godata
 
 ADD docker-entrypoint.sh /
 
@@ -56,8 +56,8 @@ COPY --from=gocd-agent-unzip /go-agent /go-agent
 # ensure that logs are printed to console output
 COPY --chown=go:root agent-bootstrapper-logback-include.xml agent-launcher-logback-include.xml agent-logback-include.xml /go-agent/config/
 
-RUN chown -R go:root /docker-entrypoint.d /go /godata /docker-entrypoint.sh \
-    && chmod -R g=u /docker-entrypoint.d /go /godata /docker-entrypoint.sh
+RUN chown -R go:root /docker-entrypoint.d /gocd /godata /docker-entrypoint.sh \
+    && chmod -R g=u /docker-entrypoint.d /gocd /godata /docker-entrypoint.sh
 
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
