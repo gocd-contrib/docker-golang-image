@@ -10,7 +10,7 @@ RUN \
 RUN unzip /tmp/go-agent-19.8.0-9915.zip -d /
 RUN mv /go-agent-19.8.0 /go-agent && chown -R ${UID}:0 /go-agent && chmod -R g=u /go-agent
 
-FROM golang:1.13.8-buster
+FROM golang:1.14.1-buster
 MAINTAINER ThoughtWorks, Inc. <support@thoughtworks.com>
 
 LABEL gocd.version="19.8.0" \
