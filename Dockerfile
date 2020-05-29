@@ -28,7 +28,8 @@ RUN \
     ca-certificates \
     gcc \
     musl-dev \
-    openssl && \
+    openssl \
+    zip && \
   mkdir -p "$GOPATH/src" "$GOPATH/bin" && \
   chown -R go:root /usr/local/go $GOPATH && \
   chmod -R a+rx /usr/local/go/bin $GOPATH/bin && \
