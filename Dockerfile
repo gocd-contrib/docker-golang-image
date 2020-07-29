@@ -1,22 +1,22 @@
 FROM golang:1.14-alpine3.11 as golang
 
-FROM gocd/gocd-agent-alpine-3.11:v20.4.0
+FROM gocd/gocd-agent-alpine-3.11:v20.6.0
 
 MAINTAINER GoCD Team <go-cd-dev@googlegroups.com>
 
-LABEL gocd.version="20.4.0" \
-  description="GoCD agent with golang 1.14.3 based on alpine version 3.11" \
+LABEL gocd.version="20.6.0" \
+  description="GoCD agent with golang 1.14.6 based on alpine version 3.12" \
   maintainer="GoCD Team <go-cd-dev@googlegroups.com>" \
   url="https://www.gocd.org" \
-  gocd.full.version="20.4.0-11749" \
-  gocd.git.sha="5553066d29d315951efa5ead0c087374df6338b9"
+  gocd.full.version="20.6.0-12005" \
+  gocd.git.sha="12860aac6351e2a353728c7d7913f34d741c63e0"
 
 USER root
 
 COPY --from=golang /etc/nsswitch.conf /etc/nsswitch.conf
 COPY --from=golang /usr/local/go /usr/local/go
 
-ENV GOLANG_VERSION 1.14.3
+ENV GOLANG_VERSION 1.14.6
 ENV GOPATH /home/go
 ENV PATH "$GOPATH/bin:/usr/local/go/bin:$PATH"
 
