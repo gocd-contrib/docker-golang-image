@@ -1,6 +1,6 @@
 FROM golang:1.14-alpine3.11 as golang
 
-FROM gocd/gocd-agent-alpine-3.11:v20.6.0
+FROM gocd/gocd-agent-alpine-3.11:v21.1.0
 
 MAINTAINER GoCD Team <go-cd-dev@googlegroups.com>
 
