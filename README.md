@@ -3,7 +3,7 @@ A docker image containing a Golang environment for builds
 
 ## Includes everything needed to build a basic golang project
 
-- golang 1.14.6 (based on the official golang alpine image)
+- golang (based on the official golang alpine image)
 - git
 - gcc
 - bash
@@ -37,7 +37,7 @@ docker run -d \
   -e AGENT_AUTO_REGISTER_RESOURCES=... \
   -e AGENT_AUTO_REGISTER_ENVIRONMENTS=... \
   -e AGENT_AUTO_REGISTER_HOSTNAME=... \
-  gocddev/golang-build:3.1.0
+  gocddev/golang-build:4.0.0
 ```
 
 If the `AGENT_AUTO_REGISTER_*` variables are provided (we recommend that you do), then the agent will be automatically approved by the server. See the [auto registration docs](https://docs.gocd.org/current/advanced_usage/agent_auto_register.html) on the GoCD website.
