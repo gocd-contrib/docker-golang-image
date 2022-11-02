@@ -5,5 +5,4 @@ updates:
   schedule:
     interval: weekly
     day: friday
-    timezone: Etc/UCT
   open-pull-requests-limit: 10
