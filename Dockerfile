@@ -1,4 +1,4 @@
-FROM golang:1.19.1-alpine3.16 as golang
+FROM golang:1.19.3-alpine3.16 as golang
 
 FROM gocd/gocd-agent-alpine-3.16:v22.2.0
 
