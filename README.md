@@ -18,7 +18,7 @@ A docker image containing a Golang environment for builds
 ## Building the image locally
 
 ```
-docker build . -t gocddev/golang-build:SNAPSHOT -f Dockerfile
+docker build . --pull --platform linux/amd64 -t gocddev/golang-build:SNAPSHOT -f Dockerfile
 ```
 
 ## Running
