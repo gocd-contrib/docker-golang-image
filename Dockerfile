@@ -1,6 +1,6 @@
-FROM golang:1.20-alpine3.16 as golang
+FROM golang:1.20-alpine3.17 as golang
 
-FROM gocd/gocd-agent-alpine-3.16:v22.3.0
+FROM gocd/gocd-agent-alpine-3.17:v23.1.0
 
 USER root
 
