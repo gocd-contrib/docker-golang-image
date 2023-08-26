@@ -1,6 +1,7 @@
-FROM golang:1.20-alpine3.17 as golang
+# See https://hub.docker.com/_/golang/tags
+FROM golang:1.21-alpine3.18 as golang
 
-FROM gocd/gocd-agent-alpine-3.17:v23.1.0
+FROM gocd/gocd-agent-alpine-3.18:v23.3.0
 
 USER root
 
