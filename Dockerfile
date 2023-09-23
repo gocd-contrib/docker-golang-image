@@ -11,7 +11,7 @@ ENV GOPATH /home/go
 ENV PATH "$GOPATH/bin:/usr/local/go/bin:$PATH"
 
 RUN \
-  apk --no-cache --force-overwrite upgrade && \
+  apk --no-cache upgrade && \
   # need the following for building golang projects
   # which might need cgo, netgo, etc.
   apk add --no-cache \
