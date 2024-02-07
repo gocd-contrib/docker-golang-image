@@ -1,5 +1,5 @@
 # See https://hub.docker.com/_/golang/tags
-FROM golang:1.21-alpine3.19 as golang
+FROM golang:1.22-alpine3.19 as golang
 
 FROM gocd/gocd-agent-alpine-3.19:v23.5.0
 
