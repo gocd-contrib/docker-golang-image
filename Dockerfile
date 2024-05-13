@@ -1,30 +1,25 @@
-# See https://hub.docker.com/_/golang/tags
-FROM golang:1.22-alpine3.19 as golang
-
-FROM gocd/gocd-agent-alpine-3.19:v23.5.0
+FROM gocd/gocd-agent-wolfi:v24.1.0
+ARG GOVERSION=1.22
 
 USER root
 
-COPY --from=golang /usr/local/go /usr/local/go
-
 ENV GOPATH /home/go
-ENV PATH "$GOPATH/bin:/usr/local/go/bin:$PATH"
+ENV PATH "$GOPATH/bin:$PATH"
 
 RUN \
   apk --no-cache upgrade && \
   # need the following for building golang projects
   # which might need cgo, netgo, etc.
-  apk add --no-cache \
+  apk --no-cache add \
     ca-certificates \
-    gcc \
-    musl-dev \
+    go~=${GOVERSION} \
     openssl \
     zip && \
   mkdir -p "$GOPATH/src" "$GOPATH/bin" && \
-  chown -R go:root /usr/local/go $GOPATH && \
-  chmod -R a+rx /usr/local/go/bin $GOPATH/bin && \
+  chown -R go:root $GOPATH && \
+  chmod -R a+rx $GOPATH/bin && \
   # set for login shells too
-  printf "export PATH=\"\$GOPATH/bin:/usr/local/go/bin:\$PATH\"\n" > /etc/profile.d/golang.sh
+  printf "export PATH=\"\$GOPATH/bin:\$PATH\"\n" > /etc/profile.d/golang.sh
 
 USER go
 
