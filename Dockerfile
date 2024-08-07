@@ -3,8 +3,8 @@ ARG GOVERSION=1.22
 
 USER root
 
-ENV GOPATH /home/go
-ENV PATH "$GOPATH/bin:$PATH"
+ENV GOPATH=/home/go
+ENV PATH="$GOPATH/bin:$PATH"
 
 RUN \
   apk --no-cache upgrade && \
