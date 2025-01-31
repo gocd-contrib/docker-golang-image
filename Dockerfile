@@ -1,4 +1,4 @@
-FROM gocd/gocd-agent-wolfi:v24.5.0
+FROM gocd/gocd-agent-wolfi:v25.1.0
 ARG GOVERSION=1.23
 
 USER root
