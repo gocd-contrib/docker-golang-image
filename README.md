@@ -45,10 +45,10 @@ If the `AGENT_AUTO_REGISTER_*` variables are provided (we recommend that you do)
 ## Development
 
 Pushing the built image to [Docker Hub](https://hub.docker.com/r/gocddev/golang-build) for use in [build.gocd.org](https://build.gocd.org/) builds under the `ecs-golang-build` elastic agent profile:
-* Configure Docker with with `godemo` push token/credentials for the [gocddev](https://hub.docker.com/u/gocddev) organisation
+* Login to Docker hub with an account that has push token/credentials for the [gocddev](https://hub.docker.com/u/gocddev) organisation
 * Run
   ```shell
   VERSION=4.0.11
   docker tag gocddev/golang-build:SNAPSHOT gocddev/golang-build:${VERSION}
-  docker --config ../.docker-godemo push gocddev/golang-build:${VERSION}
+  docker push gocddev/golang-build:${VERSION}
   ```
