@@ -3,7 +3,7 @@ A docker image containing a Golang environment for builds
 
 ## Includes everything needed to build a basic golang project
 
-- golang (based on the official golang alpine image)
+- golang
 - git
 - gcc
 - bash
