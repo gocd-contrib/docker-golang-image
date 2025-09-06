@@ -25,7 +25,7 @@ docker build . --pull --no-cache --platform linux/amd64 -t gocddev/golang-build:
 
 Start the container with this:
 
-```
+```shell
 docker run -d -e GO_SERVER_URL=... gocddev/golang-build:SNAPSHOT
 ```
 

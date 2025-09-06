@@ -1,5 +1,5 @@
 FROM gocd/gocd-agent-wolfi:v25.3.0
-ARG GOVERSION=1.24
+ARG GOVERSION=1.25
 
 USER root
 
