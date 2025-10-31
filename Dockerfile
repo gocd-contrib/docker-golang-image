@@ -7,7 +7,7 @@ ENV GOPATH=/home/go
 ENV PATH="$GOPATH/bin:$PATH"
 
 RUN \
-  apk --no-cache upgrade && \
+  apk --no-cache upgrade --ignore ncurses && \
   # need the following for building golang projects
   # which might need cgo, netgo, etc.
   apk --no-cache add \
